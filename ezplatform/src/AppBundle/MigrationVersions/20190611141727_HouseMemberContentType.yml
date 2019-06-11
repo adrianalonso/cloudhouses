@@ -1,0 +1,75 @@
+-
+    type: content_type
+    mode: create
+    identifier: house_member
+    name: House Member
+    content_type_group: 1
+    name_pattern: <name>
+    attributes:
+        -
+            type: ezstring
+            name: name
+            identifier: name
+            description: House Member Name
+            required: true
+            searchable: true
+            disable-translation: false
+            category: default
+            position: 1
+        -
+            type: ezstring
+            name: nicname
+            identifier: nickname
+            description: House Member Nicname
+            required: false
+            searchable: true
+            disable-translation: false
+            category: default
+            position: 2
+        -
+            type: ezimage
+            name: photo
+            identifier: photo
+            description: House Member Photo
+            required: false
+            searchable: false
+            disable-translation: false
+            category: default
+            position: 3
+        -
+            type: ezdate
+            name: member_since
+            identifier: member_since
+            description: House Member Since
+            required: false
+            searchable: true
+            disable-translation: true
+            category: default
+            position: 4
+        -
+            type: ezcountry
+            name: nationality
+            identifier: nationality
+            description: House Member Since
+            required: false
+            searchable: true
+            disable-translation: true
+            category: default
+            position: 5
+        -
+            type: ezrichtext
+            name: biography
+            identifier: biography
+            description: House Member Biography
+            required: false
+            searchable: true
+            disable-translation: true
+            category: default
+            position: 6
+    default_always_available: true
+    description: House Member Content Type
+    is_container: true
+    lang: eng-GB
+    url_name_pattern: <nickname>
+    default_sort_field: name
+    default_sort_order: ASC

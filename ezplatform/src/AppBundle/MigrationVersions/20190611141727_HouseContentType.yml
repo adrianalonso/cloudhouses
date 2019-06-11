@@ -1,0 +1,45 @@
+-
+    type: content_type
+    mode: create
+    identifier: house
+    name: House
+    content_type_group: 1
+    name_pattern: <name>
+    attributes:
+        -
+            type: ezstring
+            name: name
+            identifier: name
+            description: House Name
+            required: true
+            searchable: true
+            disable-translation: false
+            category: default
+            position: 1
+        -
+            type: eztext
+            name: description
+            identifier: description
+            description: House Description
+            required: false
+            searchable: true
+            disable-translation: false
+            category: default
+            position: 2
+        -
+            type: ezimage
+            name: shield
+            identifier: shield
+            description: House Shield
+            required: false
+            searchable: false
+            disable-translation: false
+            category: default
+            position: 3
+    default_always_available: true
+    description: House Content Type
+    is_container: true
+    lang: eng-GB
+    url_name_pattern: <name>
+    default_sort_field: name
+    default_sort_order: ASC

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99c988080477cf88ad1d1ecc55c3f1c8",
+    "content-hash": "d752fd13789d152dcbe1f46a37590ce9",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2896,6 +2896,85 @@
             "time": "2018-06-28T05:04:47+00:00"
         },
         {
+            "name": "kaliop/ezmigrationbundle",
+            "version": "5.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaliop-uk/ezmigrationbundle.git",
+                "reference": "40191897846769f9bc51dac133e25a810b5e12c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaliop-uk/ezmigrationbundle/zipball/40191897846769f9bc51dac133e25a810b5e12c2",
+                "reference": "40191897846769f9bc51dac133e25a810b5e12c2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "ezsystems/ezpublish-kernel": ">=5.4|>=2014.11",
+                "mtdowling/jmespath.php": "2.*",
+                "nikic/php-parser": "^2.0 || ^3.0 || ^4.0",
+                "php": ">=5.6",
+                "symfony/process": "*",
+                "symfony/swiftmailer-bundle": "*",
+                "symfony/validator": "*",
+                "symfony/var-dumper": "*"
+            },
+            "conflict": {
+                "ezsystems/ezpublish-kernel": "6.7.3",
+                "netgen/tagsbundle": "1.*",
+                "symfony/symfony": "3.4.12"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "~0.4",
+                "mikey179/vfsstream": "~1.2.0",
+                "php-http/mock-client": "*",
+                "phpunit/phpunit": "~4.0 || ~5.0",
+                "polishsymfonycommunity/symfony2-mocker-extension": "*",
+                "roave/security-advisories": "dev-disablechecks as dev-master"
+            },
+            "suggest": {
+                "php-http/httplug-bundle": "Required for usage of HTTP/CALL migration steps"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "ezpublish-legacy-dir": "vendor/ezsystems/ezpublish-legacy"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kaliop\\eZMigrationBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Clements",
+                    "email": "dclements@kaliop.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Gaetano Giunta",
+                    "email": "ggiunta@kaliop.com",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Peter Halasz",
+                    "email": "peter.halasz@kaliop.co.uk",
+                    "role": "Original author"
+                }
+            ],
+            "description": "Kaliop eZ-Migration Bundle",
+            "keywords": [
+                "database",
+                "ezpublish",
+                "migrations"
+            ],
+            "time": "2019-05-18T09:16:34+00:00"
+        },
+        {
             "name": "knplabs/knp-menu",
             "version": "2.3.0",
             "source": {
@@ -3522,6 +3601,61 @@
                 "psr-3"
             ],
             "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
+            "name": "mtdowling/jmespath.php",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmespath/jmespath.php.git",
+                "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
+                "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "bin": [
+                "bin/jp.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JmesPath\\": "src/"
+                },
+                "files": [
+                    "src/JmesPath.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Declaratively specify how to extract elements from a JSON document",
+            "keywords": [
+                "json",
+                "jsonpath"
+            ],
+            "time": "2016-12-03T22:08:25+00:00"
         },
         {
             "name": "nelmio/cors-bundle",
