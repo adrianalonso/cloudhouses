@@ -13,18 +13,18 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list: [site, slymfony,reactenclaw,worpindorf,slackelpuf,admin]
         groups:
-            site_group: [site]
-
-            # WARNING: Do not remove or rename this group.
-            # It's used to distinguish common siteaccesses from admin ones.
-            # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
+            site_group: [site,slymfony,reactenclaw,worpindorf,slackelpuf]
             admin_group: [admin]
         default_siteaccess: site
         match:
-            URIElement: 1
-
+            Map\URI:
+                slymfony: slymfony
+                reactenclaw: reactenclaw
+                worpindorf: worpindorf
+                slackelpuf: slackelpuf
+                admin: admin
     # System settings, read in following order: `default`, <siteaccess-group>, <siteacces>, and `global`
     # TIP: For multisite installations organize shared config into SiteAccess groups,
     #      on single-site you can place shared config under "default" for simplicity as shown below.
@@ -63,6 +63,34 @@ ezpublish:
 
         site:
             languages: [eng-GB]
+            content:
+                tree_root:
+                    location_id: 2
+
+        slymfony:
+            languages: [eng-GB]
+            pagelayout: "themes/slymfony/pagelayout.html.twig"
+            design: slymfony
+            content:
+                tree_root:
+                    location_id: 54
+        reactenclaw:
+            languages: [eng-GB]
+            pagelayout: "themes/reactenclaw/pagelayout.html.twig"
+            design: slymfony
+            content:
+                tree_root:
+                    location_id: 55
+        worpindorf:
+            languages: [eng-GB]
+            content:
+                tree_root:
+                    location_id: 56
+        slackelpuf:
+            languages: [eng-GB]
+            content:
+                tree_root:
+                    location_id: 57
 
     url_alias:
         slug_converter:
@@ -71,3 +99,9 @@ ezpublish:
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
     override_kernel_templates: true
+
+ezdesign:
+    design_list:
+        default: [default]
+        slymfony: [slymfony]
+        reactenclaw: [reactenclaw]

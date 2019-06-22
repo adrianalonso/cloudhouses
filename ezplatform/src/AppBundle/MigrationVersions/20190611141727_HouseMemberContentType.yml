@@ -18,7 +18,7 @@
             position: 1
         -
             type: ezstring
-            name: nicname
+            name: nickname
             identifier: nickname
             description: House Member Nicname
             required: false

@@ -1,0 +1,19 @@
+-
+  mode: update
+  type: role
+  match:
+    id: 1
+  policies:
+    -
+      module: content
+      function: read
+
+    -
+      module: user
+      function: login
+      limitations:
+        - { identifier: SiteAccess, values: [site, slymfony, reactenclaw, slackelpuf, worpindorf] }
+
+    -
+      module: content
+      function: versionread

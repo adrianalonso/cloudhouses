@@ -1,0 +1,58 @@
+-
+    type: content
+    mode: create
+    content_type: house
+    parent_location: 2
+    attributes:
+        name: Slymfony
+        description: Sylmfony House
+    always_available: true
+    is_hidden: false
+    lang: eng-GB
+    location_remote_id: slymfony-location
+    remote_id: slymfony
+    section: 1
+-
+    type: content
+    mode: create
+    content_type: house
+    parent_location: 2
+    attributes:
+        name: Reactenclaw
+        description: React House
+    always_available: true
+    is_hidden: false
+    lang: eng-GB
+    location_remote_id: reactenclaw-location
+    remote_id: reactenclaw
+    section: 1
+
+-
+    type: content
+    mode: create
+    content_type: house
+    parent_location: 2
+    attributes:
+        name: Worpindorf
+        description: Worpindorf House
+    always_available: true
+    is_hidden: false
+    lang: eng-GB
+    location_remote_id: worpindorf-location
+    remote_id: worpindorf
+    section: 1
+
+-
+    type: content
+    mode: create
+    content_type: house
+    parent_location: 2
+    attributes:
+        name: Slacklepuff
+        description: Slacklepuff House
+    always_available: true
+    is_hidden: false
+    lang: eng-GB
+    location_remote_id: slacklepuff-location
+    remote_id: slacklepuff
+    section: 1
