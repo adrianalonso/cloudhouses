@@ -17,21 +17,20 @@
     <!-- Compiled and minified JavaScript -->
 
     {% block page_head %}
-        <title>{{ title|default('') }} - Slymfony Website</title>
+        <title>{{ title|default('') }} - Worpindorf Website</title>
     {% endblock %}
 
     {% block head_styles %}
-        {{ encore_entry_link_tags('slymfony') }}
+        {{ encore_entry_link_tags('worpindorf') }}
     {% endblock %}
 
 </head>
 <body>
-
 {% block header %}
-    <nav class="green darken-3" role="navigation">
+    <nav class="red darken-3" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="{{ path( ezpublish.rootLocation ) }}" class="brand-logo center">
-                Slymfony
+                Worpindorf
             </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/"> Home</a></li>
@@ -39,7 +38,6 @@
         </div>
     </nav>
 {% endblock %}
-
 
 {% block content %}
 {% endblock %}

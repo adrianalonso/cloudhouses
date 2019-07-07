@@ -12,7 +12,7 @@
       module: user
       function: login
       limitations:
-        - { identifier: SiteAccess, values: [site, slymfony, reactenclaw, slackelpuf, worpindorf] }
+        - { identifier: SiteAccess, values: [site_en, site_es, slymfony, reactenclaw, slackelpuff, worpindorf] }
 
     -
       module: content

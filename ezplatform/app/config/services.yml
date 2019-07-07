@@ -12,4 +12,12 @@ services:
         autoconfigure: true
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
-        public: false
+        public: true
+
+    AppBundle\Controller\HomepageController:
+        autowire: true
+    AppBundle\Controller\HouseController:
+        autowire: true
+    AppBundle\Services\GetChildren:
+        autowire: true
+
