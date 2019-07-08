@@ -1,0 +1,6 @@
+HouseMemberContentConnection:
+    type: relay-connection
+    inherits:
+        - DomainContentByIdentifierConnection
+    config:
+        nodeType: HouseMemberContent

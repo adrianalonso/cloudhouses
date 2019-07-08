@@ -1,0 +1,16 @@
+DomainGroupContentTypes:
+    type: object
+    config:
+        fields:
+            article:
+                type: ArticleContentType
+                resolve: '@=resolver("ContentType", [{"identifier": "article"}])'
+            folder:
+                type: FolderContentType
+                resolve: '@=resolver("ContentType", [{"identifier": "folder"}])'
+            house:
+                type: HouseContentType
+                resolve: '@=resolver("ContentType", [{"identifier": "house"}])'
+            houseMember:
+                type: HouseMemberContentType
+                resolve: '@=resolver("ContentType", [{"identifier": "house_member"}])'

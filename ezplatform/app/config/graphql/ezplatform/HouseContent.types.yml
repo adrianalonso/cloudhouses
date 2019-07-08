@@ -1,0 +1,21 @@
+HouseContent:
+    type: object
+    inherits:
+        - AbstractDomainContent
+    config:
+        interfaces:
+            - DomainContent
+            - Node
+        fields:
+            name:
+                type: String
+                resolve: '@=resolver("DomainFieldValue", [value, "name"])'
+            description:
+                type: String
+                resolve: '@=resolver("DomainFieldValue", [value, "description"])'
+            shield:
+                type: ImageFieldValue
+                resolve: '@=resolver("DomainFieldValue", [value, "shield"])'
+            main:
+                type: HouseMemberContent
+                resolve: '@=resolver("DomainRelationFieldValue", [resolver("DomainFieldValue", [value, "main"]), false])'

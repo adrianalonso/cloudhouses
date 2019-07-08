@@ -1,0 +1,41 @@
+DomainGroupMedia:
+    type: object
+    inherits:
+        - DomainContentTypeGroup
+    config:
+        fields:
+            _types:
+                type: DomainGroupMediaTypes
+                resolve: {  }
+            files:
+                type: FileContentConnection
+                description: 'No description available'
+                resolve: '@=resolver("SearchContentOfTypeAsConnection", ["file", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A sort clause, or array of clauses. Add _desc after a clause to reverse it' }
+            file:
+                type: FileContent
+                description: 'No description available'
+                resolve: '@=resolver("DomainContentItem", [args, "file"])'
+                args:
+                    id: { type: Int, description: 'A file content id' }
+                    remoteId: { type: String, description: 'A file content remote id' }
+                    locationId: { type: Int, description: 'A file content location id' }
+            images:
+                type: ImageContentConnection
+                description: 'No description available'
+                resolve: '@=resolver("SearchContentOfTypeAsConnection", ["image", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A sort clause, or array of clauses. Add _desc after a clause to reverse it' }
+            image:
+                type: ImageContent
+                description: 'No description available'
+                resolve: '@=resolver("DomainContentItem", [args, "image"])'
+                args:
+                    id: { type: Int, description: 'A image content id' }
+                    remoteId: { type: String, description: 'A image content remote id' }
+                    locationId: { type: Int, description: 'A image content location id' }

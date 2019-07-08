@@ -1,0 +1,22 @@
+HouseMemberContentUpdateInput:
+    type: input-object
+    config:
+        fields:
+            name:
+                type: String
+                description: 'House Member Name'
+            nickname:
+                type: String
+                description: 'House Member Nicname'
+            photo:
+                type: ImageFieldInput
+                description: 'House Member Photo'
+            memberSince:
+                type: DateFieldInput
+                description: 'House Member Since'
+            nationality:
+                type: '[String]'
+                description: 'House Member Since'
+            biography:
+                type: RichTextFieldInput
+                description: 'House Member Biography'

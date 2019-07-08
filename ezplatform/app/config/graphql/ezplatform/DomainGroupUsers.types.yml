@@ -1,0 +1,41 @@
+DomainGroupUsers:
+    type: object
+    inherits:
+        - DomainContentTypeGroup
+    config:
+        fields:
+            _types:
+                type: DomainGroupUsersTypes
+                resolve: {  }
+            users:
+                type: UserContentConnection
+                description: 'No description available'
+                resolve: '@=resolver("SearchContentOfTypeAsConnection", ["user", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A sort clause, or array of clauses. Add _desc after a clause to reverse it' }
+            user:
+                type: UserContent
+                description: 'No description available'
+                resolve: '@=resolver("DomainContentItem", [args, "user"])'
+                args:
+                    id: { type: Int, description: 'A user content id' }
+                    remoteId: { type: String, description: 'A user content remote id' }
+                    locationId: { type: Int, description: 'A user content location id' }
+            userGroups:
+                type: UserGroupContentConnection
+                description: 'No description available'
+                resolve: '@=resolver("SearchContentOfTypeAsConnection", ["user_group", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A sort clause, or array of clauses. Add _desc after a clause to reverse it' }
+            userGroup:
+                type: UserGroupContent
+                description: 'No description available'
+                resolve: '@=resolver("DomainContentItem", [args, "user_group"])'
+                args:
+                    id: { type: Int, description: 'A user_group content id' }
+                    remoteId: { type: String, description: 'A user_group content remote id' }
+                    locationId: { type: Int, description: 'A user_group content location id' }

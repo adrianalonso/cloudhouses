@@ -1,0 +1,32 @@
+HouseMemberContentType:
+    type: object
+    inherits:
+        - BaseDomainContentType
+    config:
+        interfaces:
+            - DomainContentType
+        fields:
+            name:
+                type: TextLineFieldDefinition
+                description: 'House Member Name'
+                resolve: '@=value.getFieldDefinition("name")'
+            nickname:
+                type: TextLineFieldDefinition
+                description: 'House Member Nicname'
+                resolve: '@=value.getFieldDefinition("nickname")'
+            photo:
+                type: BinaryFieldDefinition
+                description: 'House Member Photo'
+                resolve: '@=value.getFieldDefinition("photo")'
+            memberSince:
+                type: FieldDefinition
+                description: 'House Member Since'
+                resolve: '@=value.getFieldDefinition("member_since")'
+            nationality:
+                type: CountryFieldDefinition
+                description: 'House Member Since'
+                resolve: '@=value.getFieldDefinition("nationality")'
+            biography:
+                type: FieldDefinition
+                description: 'House Member Biography'
+                resolve: '@=value.getFieldDefinition("biography")'

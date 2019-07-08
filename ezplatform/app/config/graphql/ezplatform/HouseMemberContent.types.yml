@@ -1,0 +1,27 @@
+HouseMemberContent:
+    type: object
+    inherits:
+        - AbstractDomainContent
+    config:
+        interfaces:
+            - DomainContent
+            - Node
+        fields:
+            name:
+                type: String
+                resolve: '@=resolver("DomainFieldValue", [value, "name"])'
+            nickname:
+                type: String
+                resolve: '@=resolver("DomainFieldValue", [value, "nickname"])'
+            photo:
+                type: ImageFieldValue
+                resolve: '@=resolver("DomainFieldValue", [value, "photo"])'
+            memberSince:
+                type: DateTime
+                resolve: '@=resolver("DomainFieldValue", [value, "member_since"]).date'
+            nationality:
+                type: String
+                resolve: '@=resolver("DomainFieldValue", [value, "nationality"])'
+            biography:
+                type: RichTextFieldValue
+                resolve: '@=resolver("DomainFieldValue", [value, "biography"])'

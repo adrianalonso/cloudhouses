@@ -1,0 +1,23 @@
+HouseContentType:
+    type: object
+    inherits:
+        - BaseDomainContentType
+    config:
+        interfaces:
+            - DomainContentType
+        fields:
+            name:
+                type: TextLineFieldDefinition
+                description: 'House Name'
+                resolve: '@=value.getFieldDefinition("name")'
+            description:
+                type: TextBlockFieldDefinition
+                description: 'House Description'
+                resolve: '@=value.getFieldDefinition("description")'
+            shield:
+                type: BinaryFieldDefinition
+                description: 'House Shield'
+                resolve: '@=value.getFieldDefinition("shield")'
+            main:
+                type: RelationFieldDefinition
+                resolve: '@=value.getFieldDefinition("main")'

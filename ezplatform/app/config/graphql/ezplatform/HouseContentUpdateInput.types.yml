@@ -1,0 +1,15 @@
+HouseContentUpdateInput:
+    type: input-object
+    config:
+        fields:
+            name:
+                type: String
+                description: 'House Name'
+            description:
+                type: String
+                description: 'House Description'
+            shield:
+                type: ImageFieldInput
+                description: 'House Shield'
+            main:
+                type: Int

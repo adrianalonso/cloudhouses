@@ -15,7 +15,7 @@
 
     <div class="row">
         {% for child in children.searchHits %}
-            <div class="col m6">
+            <div class="col m4">
                 <div class="card">
                     <div class="card-image">
                         {{ ez_render_field(child.valueObject, 'photo') }}
@@ -33,5 +33,6 @@
             </div>
         {% endfor %}
     </div>
+
 
 {% endblock %}
